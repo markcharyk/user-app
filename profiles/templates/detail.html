@@ -1,0 +1,7 @@
+<h1>{{ profile.first_name }} {{ profile.last_name }}</h1>
+
+<p>{{ profile.email }}</p>
+
+<a href="{% url "edit" pk=profile.id %}">Edit This User</a>
+
+<a href="<% url "delete" pk=profile.id %}">Delete This User</a>

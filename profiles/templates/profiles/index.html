@@ -1,0 +1,13 @@
+<h1>List Of Users</h1>
+
+{% if profile_list %}
+<ul>
+	{% for profile in profile_list %}
+	<li><a href="{% url 'detail' profile.id %}">{{ profile }} </a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No profiles are available</p>
+{% endif %}
+
+<a href="{% url "create" %}" class="btn" role="button">Add a User</a>

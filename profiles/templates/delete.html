@@ -1,0 +1,12 @@
+<h1>Delete {{ profile.first_name }} {{ profile.last_name }}</h1>
+
+<p>Are you sure?</p>
+
+<form action="{% url "delete" pk=profile.id %}" method="POST">
+	{% csrf_token %}
+	<input type="submit" value="YES" class="btn"/>
+</form>
+
+<form action="{% url "index" %}">
+	<input type="submit" value="NO" class="btn"/>
+</form>
